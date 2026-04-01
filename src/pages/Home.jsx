@@ -31,14 +31,9 @@ export default function Home() {
 
           <div className="card-column">
             <div className="card">
-              <div className="card-eyebrow">WHAT THIS FIXES</div>
-              <ul className="simple-list">
-                <li>Cleaner homepage</li>
-                <li>Better mobile readability</li>
-                <li>No duplicated clutter</li>
-                <li>Clear ticket path</li>
-                <li>No dead shop links</li>
-              </ul>
+              <div className="card-eyebrow"></div>
+              
+              
             </div>
 
             <div className="card">
@@ -91,8 +86,7 @@ export default function Home() {
           <p className="large-text">
             Caterwaul is a Minneapolis music gathering focused on underground
             artists, community, and bands that do not fit neatly into one lane.
-            This page should tell people what it is, where it is, why it
-            matters, and how to get in.
+            
           </p>
         </div>
       </section>
