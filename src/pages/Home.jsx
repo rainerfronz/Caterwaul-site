@@ -8,7 +8,7 @@ export default function Home() {
         <div className="container hero-grid">
           <div>
             <div className="badge">DIY / UNDERGROUND / LOUD</div>
-            <h1 className="hero-title">A QUICK, CLEAN CATERWAUL SITE.</h1>
+            <h1 className="hero-title">CATERWAUL SITE.</h1>
             <p className="hero-text">Welcome to Caterwaul.</p>
 
             <div className="button-row">

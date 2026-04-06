@@ -422,6 +422,29 @@ body {
 	color: #a1a1aa;
 	font-size: 14px;
 }
+.sponsor-logo {
+  width: 100%;
+  max-width: 240px;   /* 🔥 control size here */
+  height: auto;
+  display: block;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+.sponsor-logo {
+  margin: 0 auto 12px;
+}
+.sponsor-card {
+  text-align: center;
+}
+.sponsor-logo {
+  filter: grayscale(100%) contrast(120%);
+  opacity: 0.9;
+}
+
+.sponsor-logo:hover {
+  filter: none;
+  opacity: 1;
+}
 
 
 @media (max-width: 640px) {

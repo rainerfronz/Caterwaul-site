@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import caterwaulImage from '../images/CATERORANGE.png';
+import caterwaulImage from '/public/images/CATERORANGE.png';
 export default function Hero() {
 	const targetDate = useMemo(() => new Date('2026-06-05T00:00:00'), []);
 
