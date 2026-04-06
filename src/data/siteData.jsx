@@ -33,7 +33,7 @@ export const lineup = [
 	'Stress Positions',
 	'The Thirsty Giants',
 	'We Are the Asteroid',
-	<a href= "https://watchesnc.bandcamp.com/>"¿watches?"</a>,
+	/*<a href= "https://watchesnc.bandcamp.com/>"¿watches?"</a>,*/
 	'Whippets',
 ];
 
