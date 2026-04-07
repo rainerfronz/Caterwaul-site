@@ -1,0 +1,26 @@
+export const bands = [
+  {
+    slug: 'tongue-party',
+    name: 'Tongue Party',
+    image: '/images/bands/tongue-party.jpg',
+    bio: 'Tongue Party make blown-out, loud, damaged rock that fits perfectly inside the Caterwaul universe.',
+    day: 'Friday',
+    date: 'June 5, 2026',
+    time: '8:30 PM',
+    venue: 'Zhora Darling',
+    website: 'https://tongueparty.bandcamp.com',
+    bandcampEmbed: 'https://bandcamp.com/EmbeddedPlayer/album=0000000000/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/',
+  },
+  {
+    slug: 'stress-positions',
+    name: 'Stress Positions',
+    image: '/images/bands/stress-positions.jpg',
+    bio: 'Stress Positions bring feral, fast, confrontational punk with zero wasted motion.',
+    day: 'Saturday',
+    date: 'June 6, 2026',
+    time: '9:15 PM',
+    venue: 'Zhora Darling',
+    website: 'https://stresspositions.bandcamp.com',
+    bandcampEmbed: 'https://bandcamp.com/EmbeddedPlayer/album=0000000000/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/',
+  },
+];

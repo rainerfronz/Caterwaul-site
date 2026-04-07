@@ -445,6 +445,93 @@ body {
   filter: none;
   opacity: 1;
 }
+.sponsor-lead-grid {
+  margin-bottom: 40px;
+}
+
+.sponsor-perks {
+  margin-top: 12px;
+}
+
+.sponsor-perks li {
+  margin-bottom: 8px;
+}
+
+.card-text a {
+  color: inherit;
+}
+.band-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.band-card-link:hover .band-card {
+  transform: translateY(-2px);
+  border-color: #555;
+}
+
+.band-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 24px;
+  padding: 22px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.band-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.band-page-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+.band-page-bio {
+  margin-top: 18px;
+  margin-bottom: 24px;
+}
+
+.band-meta-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.band-meta-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #2f2f35;
+}
+
+.band-meta-row:last-child {
+  border-bottom: none;
+}
+
+.band-meta-label {
+  color: #a1a1aa;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+}
+
+.bandcamp-wrap {
+  max-width: 700px;
+}
+
 
 
 @media (max-width: 640px) {

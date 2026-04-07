@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+import { faq } from '../data/siteData';
+import { bands } from '../data/bandsData';
+import { Link } from 'react-router-dom';
 import { faq, lineup } from '../data/siteData';
 
 export default function Home() {
@@ -45,6 +48,9 @@ export default function Home() {
                 <div className="small-box">FAQ</div>
                 <div className="small-box">Press</div>
                 <div className="small-box">Contact</div>
+                <Link to="/become-a-sponsor" className="primary-button">
+  Become a Sponsor
+</Link>
               </div>
             </div>
           </div>
@@ -66,13 +72,19 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="lineup-grid">
-            {lineup.map((band) => (
-              <div key={band} className="band-card">
-                {band}
-              </div>
-            ))}
-          </div>
+         <div className="lineup-grid">
+  {bands.map((band) => (
+    <Link
+      key={band.slug}
+      to={`/bands/${band.slug}`}
+      className="band-card-link"
+    >
+      <div className="band-card">
+        {band.name}
+      </div>
+    </Link>
+  ))}
+</div>
         </div>
       </section>
 
