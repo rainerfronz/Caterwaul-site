@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { faq } from '../data/siteData';
 import { bands } from '../data/bandsData';
-import { Link } from 'react-router-dom';
-import { faq, lineup } from '../data/siteData';
+
 
 export default function Home() {
   return (
