@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { faq } from '../data/siteData';
 import { bands } from '../data/bandsData';
 
-
 export default function Home() {
   return (
     <main>
@@ -28,6 +27,9 @@ export default function Home() {
               <Link to="/sponsors" className="secondary-button">
                 Sponsors
               </Link>
+              <Link to="/become-a-sponsor" className="primary-button">
+  Become a Sponsor
+</Link>
             </div>
           </div>
 
@@ -39,7 +41,7 @@ export default function Home() {
             </div>
 
             <div className="card">
-              <div className="card-eyebrow">KEEP THE SITE SMALL</div>
+              
               <div className="small-grid">
                 <div className="small-box">Home</div>
                 <div className="small-box">Lineup</div>
@@ -47,9 +49,7 @@ export default function Home() {
                 <div className="small-box">FAQ</div>
                 <div className="small-box">Press</div>
                 <div className="small-box">Contact</div>
-                <Link to="/become-a-sponsor" className="primary-button">
-  Become a Sponsor
-</Link>
+                
               </div>
             </div>
           </div>
@@ -78,9 +78,7 @@ export default function Home() {
       to={`/bands/${band.slug}`}
       className="band-card-link"
     >
-      <div className="band-card">
-        {band.name}
-      </div>
+      <div className="band-card">{band.name}</div>
     </Link>
   ))}
 </div>
