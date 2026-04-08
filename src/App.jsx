@@ -5,8 +5,8 @@ import './App.css';
 import Hero from './pages/Hero';
 import Home from './pages/Home';
 import Sponsors from './sponsors/sponsors';
-import BecomeSponsor from './sponsors/BecomeSponsor';
-import BandPage from './pages/BandPage';
+import BecomeSponsor from './sponsors/becomeSponsor';
+import BandPage from './pages/bandPage';
 
 export default function App() {
   return (
