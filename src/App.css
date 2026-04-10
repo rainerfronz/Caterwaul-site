@@ -531,7 +531,126 @@ body {
 .bandcamp-wrap {
   max-width: 700px;
 }
+.band-admin-intro code {
+  background: #18181b;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
 
+.band-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.band-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.band-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.band-form-field-full {
+  grid-column: 1 / -1;
+}
+
+.band-form-field span,
+.band-form-checkbox span {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a1a1aa;
+}
+
+.band-form-field input,
+.band-form-field textarea {
+  width: 100%;
+  border: 1px solid #333;
+  background: #0f0f10;
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font: inherit;
+}
+
+.band-form-field textarea {
+  resize: vertical;
+}
+
+.band-form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 28px;
+}
+
+.slug-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.band-admin-button {
+  cursor: pointer;
+  border: none;
+}
+
+.band-admin-preview-image {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 18px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.band-admin-image-placeholder {
+  width: 100%;
+  max-width: 320px;
+  min-height: 220px;
+  border: 1px dashed #444;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  color: #888;
+}
+
+.band-admin-preview-title {
+  margin-bottom: 16px;
+}
+
+.band-admin-output {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #0f0f10;
+  border: 1px solid #27272a;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e4e4e7;
+}
+
+@media (max-width: 640px) {
+  .band-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .band-form-field-full {
+    grid-column: auto;
+  }
+
+  .slug-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
 
 
 @media (max-width: 640px) {

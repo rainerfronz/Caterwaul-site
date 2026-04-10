@@ -35,4 +35,19 @@ export const bands = [
     website: 'https://www.instagram.com/panelpanelbobanel/',
     bandcampEmbed: 'https://panelpanelbobanel.bandcamp.com/track/solid-start',
 },
+{
+  "slug": "art-star",
+  "name": "Art Star",
+  "image": "art-star.jpg",
+  "bio": "Art Star is a sharp-edged indie rock project blending glam swagger, art-school attitude, and jagged post-punk energy. Built on punchy riffs, sardonic lyrics, and a DIY ethos, the band delivers songs that feel both immediate and off-kilter—equal parts danceable and confrontational. Art Star thrives in the space between style and substance, turning raw hooks into something strange, stylish, and distinctly their own.",
+  "day": "Saturday",
+  "date": "June 6th",
+  "time": "",
+  "venue": "Zhora Darling",
+  "website": "https://arrrrrtstarrrrr.bandcamp.com/album/big-mouth-singers",
+  "instagram": "https://www.instagram.com/arrrrrtstarrrrr/",
+  "bandcampEmbed": "<iframe style=\"border: 0; width: 100%; height: 42px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3011424387/size=small/bgcol=ffffff/linkcol=0687f5/track=1375523688/transparent=true/\" seamless><a href=\"https://arrrrrtstarrrrr.bandcamp.com/album/live-at-the-library\">Live at the Library by Art Star</a></iframe>",
+  "order": 0,
+  "featured": false
+},
 ];
