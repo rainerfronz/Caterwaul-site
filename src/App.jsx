@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/Home';
-import BandPage from './pages/bandPage';
+import bandPage from './pages/bandPage';
 import BandAdmin from './pages/BandAdmin';
 import AdminNews from './pages/AdminNews';
 import BecomeSponsor from './sponsors/becomeSponsor';

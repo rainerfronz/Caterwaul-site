@@ -38,7 +38,7 @@ export const bands = [
 {
   "slug": "art-star",
   "name": "Art Star",
-  "image": "art-star.jpg",
+  "image": "/images/bands/art-star.jpg",
   "bio": "Art Star is a sharp-edged indie rock project blending glam swagger, art-school attitude, and jagged post-punk energy. Built on punchy riffs, sardonic lyrics, and a DIY ethos, the band delivers songs that feel both immediate and off-kilter—equal parts danceable and confrontational. Art Star thrives in the space between style and substance, turning raw hooks into something strange, stylish, and distinctly their own.",
   "day": "Saturday",
   "date": "June 6th",
