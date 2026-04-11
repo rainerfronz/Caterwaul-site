@@ -1,93 +1,144 @@
 import { useState } from 'react';
 
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/['"]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 export default function AdminNews() {
-  const [form, setForm] = useState({
-    title: '',
-    excerpt: '',
-    body: '',
-    published: true,
-    secret: '',
-  });
-  const [status, setStatus] = useState('');
+  const [title, setTitle] = useState('');
+  const [slug, setSlug] = useState('');
+  const [excerpt, setExcerpt] = useState('');
+  const [body, setBody] = useState('');
+  const [published, setPublished] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
 
   async function handleSubmit(e) {
     e.preventDefault();
-    setStatus('Saving...');
+    setSubmitting(true);
+    setMessage('');
+    setError('');
 
     try {
       const res = await fetch('/api/admin-news', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer your-secret-here',
+        },
+        body: JSON.stringify({
+          title,
+          slug: slug || slugify(title),
+          excerpt,
+          body,
+          published,
+        }),
       });
 
       const data = await res.json();
 
       if (!res.ok) {
-        setStatus(data.error || 'Something broke');
-        return;
+        throw new Error(data?.error || `HTTP ${res.status}`);
       }
 
-      setStatus('Post saved.');
-      setForm({
-        title: '',
-        excerpt: '',
-        body: '',
-        published: true,
-        secret: '',
-      });
-    } catch (error) {
-      console.error(error);
-      setStatus('Request failed.');
+      setMessage(`Post created: ${data.title}`);
+      setTitle('');
+      setSlug('');
+      setExcerpt('');
+      setBody('');
+      setPublished(true);
+    } catch (err) {
+      console.error('Failed to create post:', err);
+      setError(err.message || 'Something went wrong');
+    } finally {
+      setSubmitting(false);
     }
   }
 
   return (
-    <div style={{ maxWidth: 760, margin: '0 auto', padding: '2rem' }}>
-      <h1>Add News Post</h1>
+    <main className="section">
+      <div className="container" style={{ maxWidth: '800px' }}>
+        <div className="eyebrow">ADMIN</div>
+        <h1 className="section-title">CREATE NEWS POST</h1>
 
-      <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '1rem' }}>
-        <input
-          type="text"
-          placeholder="Title"
-          value={form.title}
-          onChange={(e) => setForm({ ...form, title: e.target.value })}
-        />
+        <form onSubmit={handleSubmit} className="card" style={{ display: 'grid', gap: '16px' }}>
+          <div>
+            <label htmlFor="title" className="card-eyebrow">TITLE</label>
+            <input
+              id="title"
+              type="text"
+              value={title}
+              onChange={(e) => {
+                const nextTitle = e.target.value;
+                setTitle(nextTitle);
+                if (!slug) {
+                  setSlug(slugify(nextTitle));
+                }
+              }}
+              required
+              style={{ width: '100%', padding: '12px' }}
+            />
+          </div>
 
-        <input
-          type="text"
-          placeholder="Excerpt"
-          value={form.excerpt}
-          onChange={(e) => setForm({ ...form, excerpt: e.target.value })}
-        />
+          <div>
+            <label htmlFor="slug" className="card-eyebrow">SLUG</label>
+            <input
+              id="slug"
+              type="text"
+              value={slug}
+              onChange={(e) => setSlug(slugify(e.target.value))}
+              style={{ width: '100%', padding: '12px' }}
+            />
+          </div>
 
-        <textarea
-          rows="10"
-          placeholder="Body"
-          value={form.body}
-          onChange={(e) => setForm({ ...form, body: e.target.value })}
-        />
+          <div>
+            <label htmlFor="excerpt" className="card-eyebrow">EXCERPT</label>
+            <textarea
+              id="excerpt"
+              value={excerpt}
+              onChange={(e) => setExcerpt(e.target.value)}
+              rows={3}
+              style={{ width: '100%', padding: '12px' }}
+            />
+          </div>
 
-        <label>
-          <input
-            type="checkbox"
-            checked={form.published}
-            onChange={(e) => setForm({ ...form, published: e.target.checked })}
-          />
-          Published
-        </label>
+          <div>
+            <label htmlFor="body" className="card-eyebrow">BODY</label>
+            <textarea
+              id="body"
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
+              rows={10}
+              required
+              style={{ width: '100%', padding: '12px' }}
+            />
+          </div>
 
-        <input
-          type="password"
-          placeholder="Admin secret"
-          value={form.secret}
-          onChange={(e) => setForm({ ...form, secret: e.target.value })}
-        />
+          <label style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <input
+              type="checkbox"
+              checked={published}
+              onChange={(e) => setPublished(e.target.checked)}
+            />
+            Publish immediately
+          </label>
 
-        <button type="submit">Save Post</button>
-      </form>
+          <div>
+            <button type="submit" className="primary-button" disabled={submitting}>
+              {submitting ? 'Saving...' : 'Create Post'}
+            </button>
+          </div>
 
-      {status && <p style={{ marginTop: '1rem' }}>{status}</p>}
-    </div>
+          {message && <p style={{ color: 'lime' }}>{message}</p>}
+          {error && <p style={{ color: 'red' }}>{error}</p>}
+        </form>
+      </div>
+    </main>
   );
 }

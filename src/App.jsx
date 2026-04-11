@@ -2,11 +2,11 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/Home';
-import bandPage from './pages/bandPage';
+import BandPage from './pages/bandPage';
 import BandAdmin from './pages/BandAdmin';
 import AdminNews from './pages/AdminNews';
 import BecomeSponsor from './sponsors/becomeSponsor';
-import Sponsors from './sponsors/sponsors';
+import Sponsors from './sponsors/sponsor';
 import NotFound from './pages/NotFound';
 
 export default function App() {

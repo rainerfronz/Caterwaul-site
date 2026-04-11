@@ -1,4 +1,7 @@
+import dotenv from 'dotenv';
 import { Pool } from 'pg';
+
+dotenv.config({ path: '.env.local' });
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -21,6 +24,11 @@ export default async function handler(req, res) {
     return res.status(200).json(result.rows);
   } catch (error) {
     console.error('Error fetching news:', error);
-    return res.status(500).json({ error: 'Failed to fetch news' });
+    return res.status(500).json({
+      error: 'Failed to fetch news',
+      details: String(error),
+      message: error?.message || null,
+      code: error?.code || null,
+    });
   }
 }

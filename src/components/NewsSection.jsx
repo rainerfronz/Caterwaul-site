@@ -8,10 +8,16 @@ export default function NewsSection() {
     async function loadPosts() {
       try {
         const res = await fetch('/api/news');
+
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+
         const data = await res.json();
         setPosts(Array.isArray(data) ? data : []);
       } catch (error) {
         console.error('Failed to load news:', error);
+        setPosts([]);
       } finally {
         setLoading(false);
       }
@@ -25,8 +31,6 @@ export default function NewsSection() {
 
   return (
     <section className="news-section">
-      <h2>News</h2>
-
       {posts.map((post) => (
         <article key={post.id} className="news-post">
           <h3>{post.title}</h3>
