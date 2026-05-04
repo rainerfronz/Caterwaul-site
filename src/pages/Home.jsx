@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { faq } from '../data/SiteData';
 import { bands } from '../data/BandsData';
 import NewsSection from '../components/NewsSection';
-
+import Schedule from './Schedule';
 export default function Home() {
 	return (
 		<main>

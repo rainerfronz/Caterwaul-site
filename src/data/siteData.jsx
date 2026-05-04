@@ -19,7 +19,7 @@ export const lineup = [
 	'Hammer Party',
 	'Heet Deth',
 	'Mad Mojo Jett',
-	'Man With Gun',
+	,
 	'Mike Watt + the Missingmen',
 	'Muscle',
 	'New Brutalism',
@@ -45,15 +45,14 @@ export const faq = [
 	{
 		question: 'Where do I get tickets?',
 		answer:
-			'Replace the ticket link and keep it in the header and hero section.',
-	},
+			'<a href="https://ticketstripe.com/caterwaul2026">Tickets are available here.</a> They will likely sell out, so don’t wait. The longer you wait the moore expensive they will be.'},
 	{
 		question: 'What about merch?',
 		answer:
-			'If the shop is dead, hide it for now and only link to a real merch page when it is ready.',
+			'<a href="https://thecaterwaulstore.com/">Merch is available here.</a> Keep an eye out for limited edition items!',
 	},
 	{
 		question: 'Who do I contact?',
-		answer: 'Use one clear email and one Instagram link. Keep it simple.',
+		"mailto:": 'curvesandwaves@coaterwaul.org',
 	},
 ];
