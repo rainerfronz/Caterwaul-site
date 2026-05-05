@@ -4,10 +4,8 @@ import './App.css';
 import Home from './pages/Home';
 import Schedule from './pages/Schedule';
 import Sponsors from './sponsorship/Sponsors';
-//import BecomeSponsor from './sponsors/BecomeSponsor';
 import BandPage from './pages/BandPage';
-import BecomeSponsor from './sponsorship/SpoonsorPath';
-
+import BecomeSponsor from './sponsorship/SponsorPath';
 // Admin
 import BandAdmin from './pages/BandAdmin';
 import AdminNews from './pages/AdminNews';
