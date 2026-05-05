@@ -31,12 +31,12 @@ export default function App() {
       <Route path="/sponsors" element={<Sponsors />} />
       <Route path="/become-a-sponsor" element={<BecomeSponsor />} />
 
-      {/* ADMIN (keep these hidden from normal users) */}
+      {/* ADMIN */}
       <Route path="/admin/bands" element={<BandAdmin />} />
       <Route path="/admin/news" element={<AdminNews />} />
 
-      {/* 404 fallback (important) */}
+      {/* 404 fallback */}
       <Route path="*" element={<div style={{ padding: 40 }}>Page Not Found</div>} />
     </Routes>
-      );
+  );
 }
