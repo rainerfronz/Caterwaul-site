@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { faq } from '../data/SiteInformation';
-import { bands } from '../data/BandInformation';
+import { bands } from '../data/SiteInformation';
 import NewsSection from '../components/NewsSection';
 import Schedule from './Schedule';
 export default function Home() {
