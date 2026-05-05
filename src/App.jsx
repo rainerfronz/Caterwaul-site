@@ -3,8 +3,8 @@ import './App.css';
 
 import Home from './pages/Home';
 import Schedule from './pages/Schedule';
-import Sponsors from './sponsors/sponsor';
-import BecomeSponsor from './sponsors/becomeSponsor';
+import Sponsors from './sponsors/Sponsor';
+import BecomeSponsor from './sponsors/BecomeSponsor';
 import BandPage from './pages/BandPage';
 
 // Admin

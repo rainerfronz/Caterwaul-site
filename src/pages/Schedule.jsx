@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { bands } from '../data/bandsData';
+import { bands } from '../data/BandData';
 
 const days = [
   {

@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { bands } from '../data/BandsData';
+import { bands } from '../data/BandData';
 
 export default function BandPage() {
 	const { slug } = useParams();

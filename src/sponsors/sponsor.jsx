@@ -1,4 +1,4 @@
-import { sponsorLevels  } from './sponsorsData';
+import { sponsorLevels  } from './SponsorsData';
 
 export default function sponsors() {
   const activeSponsors = Sponsor.filter((sponsor) => sponsor.active);
