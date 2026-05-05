@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 //import { faq } from '../data/SiteData';
 import { faq } from '../data/SiteInformation';
-import { bands } from '../data/BandData';
+import { bands } from '../data/BandInformation';
 import NewsSection from '../components/NewsSection';
 import Schedule from './Schedule';
 export default function Home() {

@@ -49,10 +49,10 @@ export const faq = [
 	{
 		question: 'What about merch?',
 		answer:
-			'<a href="https://thecaterwaulstore.com/">Merch is available here.</a> Keep an eye out for limited edition items!',
+			'<a href="https://thecaterwaulsociety.bandcamp.com/">Merch </a>is available here. Keep an eye out for limited edition items!',
 	},
 	{
 		question: 'Who do I contact?',
-		"mailto:": 'curvesandwaves@coaterwaul.org',
+		answer: <a href="mailto:curvesandwaves@caterwaul.org">Email Us</a>
 	},
 ];
