@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { faq } from '../data/SiteInformation';
-//import { bands } from '../data/SiteInformation';
+import { bands } from '../data/BandData';
 import NewsSection from '../components/NewsSection';
-import Schedule from './Schedule';
+
 export default function Home() {
 	return (
 		<main>
@@ -36,6 +36,7 @@ export default function Home() {
 							</Link>
 						</div>
 					</div>
+					
 
 					<div className="card-column">
 						<div className="card">
@@ -51,7 +52,8 @@ export default function Home() {
 							<div className="small-grid">
 								<div className="small-box">Home</div>
 								<div className="small-box">Lineup</div>
-								<div className="small-box">Schedule</div>
+								<div className="small-box"><Link to="/schedule">Schedule</Link>
+								</div>
 								<div className="small-box">FAQ</div>
 								<div className="small-box">Press</div>
 								<div className="small-box">Contact</div>
@@ -60,6 +62,28 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+			<section className="spotify-playlist-section">
+  
+  <h2>Caterwaul Playlist</h2>
+
+  <iframe
+    data-testid="embed-iframe"
+    src="https://open.spotify.com/embed/playlist/1mbweJDwzEdCiCDgaZMXIL?utm_source=generator&theme=0"
+   //picture-in-picture"
+    loading="lazy"
+	
+  ></iframe>
+  
+</section>
+<a
+  className="secondary-button"
+  href="https://open.spotify.com/playlist/1mbweJDwzEdCiCDgaZMXIL"
+  target="_blank"
+  rel="noreferrer"
+>
+  Open Playlist on Spotify
+</a>
+
 
 			<section className="section section-border-top">
 				<div className="container">

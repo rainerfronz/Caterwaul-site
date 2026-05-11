@@ -23,7 +23,7 @@ export const sponsors = [
   {
     id: '1AAAAA',
     name: 'Skin Suit Communications',
-    logo:'/public/images/sponsors/skinsuit.jpg',
+    logo:'/images/sponsors/CaterwaulSkinsuitlogoalternate.jpg',
     level: 'presenting',
     blurb:
       'Skin Suit Communications is an Omaha-based DIY operation built to make recording and releasing music easier, cheaper, and actually possible for independent artists. Rooted in decades of underground work, they support bands through releases, merch, and the kind of infrastructure the industry usually ignores.',
@@ -36,7 +36,7 @@ export const sponsors = [
   {
     id: '2AAAAA',
     name: 'Learning Curve Records',
-    logo: '/public/images/sponsors/lcrheadlogo.jpg',
+    logo: ' /images/sponsors/HEAD_LCRLogo copy.jpg',
     level: 'presenting',
     blurb:
       'Minneapolis loud, weird, and uncompromising. Learning Curve Records is a core part of the Caterwaul ecosystem.',

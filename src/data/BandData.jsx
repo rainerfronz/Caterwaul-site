@@ -1,16 +1,5 @@
 export const bands = [
-  {
-    slug: 'tongue-party',
-    name: 'Tongue Party',
-    image: '/images/bands/tongue-party.jpg',
-    bio: 'Tongue Party make blown-out, loud, damaged rock that fits perfectly inside the Caterwaul universe.',
-    day: 'Friday',
-    date: 'June 5, 2026',
-    time: '8:30 PM',
-    venue: 'Zhora Darling',
-    website: 'https://tongueparty.bandcamp.com',
-    bandcampEmbed: 'https://bandcamp.com/EmbeddedPlayer/album=0000000000/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/',
-  },
+  
   {
     slug: 'stress-positions',
     name: 'Stress Positions',
@@ -33,7 +22,7 @@ export const bands = [
     time: '4:30 PM',
     venue: 'Zhora Darling',
     website: 'https://www.instagram.com/panelpanelbobanel/',
-    bandcampEmbed: 'https://panelpanelbobanel.bandcamp.com/track/solid-start',
+    bandcampEmbed: '',
 },
 {
   "slug": "art-star",
@@ -48,6 +37,6 @@ export const bands = [
   "instagram": "https://www.instagram.com/arrrrrtstarrrrr/",
   "bandcampEmbed": "<iframe style=\"border: 0; width: 100%; height: 42px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3011424387/size=small/bgcol=ffffff/linkcol=0687f5/track=1375523688/transparent=true/\" seamless><a href=\"https://arrrrrtstarrrrr.bandcamp.com/album/live-at-the-library\">Live at the Library by Art Star</a></iframe>",
   "order": 0,
-  "featured": false
+  "featured": this
 },
 ];

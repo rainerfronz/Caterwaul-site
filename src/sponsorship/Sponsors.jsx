@@ -1,7 +1,7 @@
-import { sponsorLevels  } from './SponsorsData';
+import { sponsorLevels, sponsors } from './SponsorsData';
 
-export default function sponsors() {
-  const activeSponsors = Sponsor.filter((sponsor) => sponsor.active);
+export default function Sponsors() {
+  const activeSponsors = sponsors.filter((sponsor) => sponsor.active);
   const sortedLevels = [...sponsorLevels].sort((a, b) => a.order - b.order);
 
   return (
