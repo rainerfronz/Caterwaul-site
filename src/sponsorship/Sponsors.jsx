@@ -1,4 +1,5 @@
 import { sponsorLevels, sponsors } from './SponsorsData';
+import { Link } from 'react-router-dom';
 
 export default function Sponsors() {
   const activeSponsors = sponsors.filter((sponsor) => sponsor.active);

@@ -62,27 +62,20 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className="spotify-playlist-section">
-  
-  <h2>Caterwaul Playlist</h2>
-
-  <iframe
-    data-testid="embed-iframe"
-    src="https://open.spotify.com/embed/playlist/1mbweJDwzEdCiCDgaZMXIL?utm_source=generator&theme=0"
-   //picture-in-picture"
-    loading="lazy"
-	
-  ></iframe>
-  
+			<section className="section">
+  <div className="spotify-full">
+    <iframe
+      src="https://open.spotify.com/embed/playlist/1mbweJDwzEdCiCDgaZMXIL?utm_source=generator&theme=0"
+      width="100%"
+      height="152"
+      frameBorder="0"
+      allowFullScreen
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+      title="Caterwaul Spotify Playlist"
+    ></iframe>
+  </div>
 </section>
-<a
-  className="secondary-button"
-  href="https://open.spotify.com/playlist/1mbweJDwzEdCiCDgaZMXIL"
-  target="_blank"
-  rel="noreferrer"
->
-  Open Playlist on Spotify
-</a>
 
 
 			<section className="section section-border-top">

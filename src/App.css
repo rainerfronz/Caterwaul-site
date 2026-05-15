@@ -56,6 +56,28 @@ body {
 	font-weight: 900;
 	letter-spacing: 0.18em;
 }
+.logo-link,
+.logo-link:visited,
+.nav-link,
+.nav-link:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.header a,
+.header a:visited {
+  color: #fff;
+}
+.nav-link:hover,
+.logo-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.ticket-button,
+.ticket-button:visited {
+  color: #fff;
+  text-decoration: none;
+}
 
 .subhead {
 	margin-top: 6px;
@@ -197,27 +219,18 @@ body {
   text-transform: uppercase;
   color: #aaa;
 }
-.playlist-card {
-  width: min(100%, 520px);
-  margin: 2rem auto;
-  padding: 1rem;
-  background: white;
-  border-radius: 40px;
+.spotify-full {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-.playlist-card h2 {
-  margin: 0 0 0.75rem;
-  font-size: 1.1rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.playlist-card iframe {
+.spotify-full iframe {
   display: block;
   width: 100%;
-  height: 1000px;
   border: 0;
-  border-radius: 30px;
+  border-radius: 0;
+}
 }
 .hero-buttons {
   display: flex;
